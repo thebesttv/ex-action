@@ -6,6 +6,8 @@ jobs:
   Change-Time-Zone:
     runs-on: ubuntu-latest
     stpes:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
       - name: Install Emacs
         run: |
           sudo snap install emacs --classic
