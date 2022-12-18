@@ -13,7 +13,7 @@ jobs:
       - name: Show disk usage
         run: |
           pwd
-          sudo df -h
+          sudo df -ah
       - name: Show fdisk
         run: sudo fdisk -l
       - name: Test Docker (sudo)
