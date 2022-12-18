@@ -11,6 +11,14 @@ jobs:
       - name: Show disk usage
         run: |
           sudo df -h
+      - name: Test Docker (sudo)
+        run: |
+          sudo docker --version
+          sudo docker run --rm hello-world
+      - name: Test Docker (regular user)
+        run: |
+          docker --version
+          docker run --rm hello-world
       - name: Install Emacs
         run: |
           sudo snap install emacs --classic
