@@ -15,7 +15,7 @@ jobs:
         run: |
           sudo snap install emacs --classic
           emacs --version | head -n1
-      - run: sudo ln -s -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+      - run: sudo ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
       - run: date
       - run: emacs -Q --batch --eval '(print (current-time-zone))'
       - run: emacs -Q --batch --eval '(print (current-time-string))'
