@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
+      - name: Show free memory
+        run: free -h
       - name: Show disk usage
         run: |
           pwd
