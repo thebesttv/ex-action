@@ -15,7 +15,7 @@ jobs:
           pwd
           sudo df -h
       - name: Show fdisk
-        run: fdisk -l
+        run: sudo fdisk -l
       - name: Test Docker (sudo)
         run: |
           sudo docker --version
