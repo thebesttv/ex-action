@@ -16,6 +16,8 @@ jobs:
           sudo df -ah
       - name: Show fdisk
         run: sudo fdisk -l
+      - name: Show mount info
+        run: sudo mount | grep /dev/
       - name: Test Docker (sudo)
         run: |
           sudo docker --version
