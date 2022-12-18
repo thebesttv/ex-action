@@ -24,11 +24,11 @@ jobs:
         run: |
           docker --version
           docker run --rm hello-world
-      - name: Install Emacs
-        run: |
-          sudo snap install emacs --classic
-          emacs --version | head -n1
+      # - name: Install Emacs
+      #   run: |
+      #     sudo snap install emacs --classic
+      #     emacs --version | head -n1
       - run: sudo ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
       - run: date
-      - run: emacs -Q --batch --eval '(print (current-time-zone))'
-      - run: emacs -Q --batch --eval '(print (current-time-string))'
+      # - run: emacs -Q --batch --eval '(print (current-time-zone))'
+      # - run: emacs -Q --batch --eval '(print (current-time-string))'
