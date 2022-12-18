@@ -10,7 +10,10 @@ jobs:
         uses: actions/checkout@v3
       - name: Show disk usage
         run: |
+          pwd
           sudo df -h
+      - name: Show fdisk
+        run: fdisk -l
       - name: Test Docker (sudo)
         run: |
           sudo docker --version
